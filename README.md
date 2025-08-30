@@ -1,4 +1,4 @@
-# AstraFi – Decentralized Staking & Rewards Platform (PoC)
+# AstraFi – Decentralized Staking & Rewards Platform
 
 ## Overview
 AstraFi is a next-generation decentralized finance (DeFi) platform built on Soundness. It allows users to deposit and stake $SND tokens securely while earning rewards. This Proof-of-Concept (PoC) demonstrates a professional, clean, and interactive staking dashboard with real-time reward simulation.
@@ -35,7 +35,7 @@ DeFi platforms can often be complex and intimidating for new users. AstraFi simp
 
 ---
 
-## How to Run the PoC
+## How to start
 1. **Download or clone** the repository/folder containing `astra-fi.html`.  
 2. **Open the file in a web browser:**  
    - On Windows/Mac: Double-click `astra-fi.html` or right-click → Open with → Browser.  
