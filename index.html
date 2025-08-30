@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstraFi – Decentralized Staking PoC</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to right, #e0f2ff, #ffffff);
+        color: #333;
+    }
+
+    header {
+        background-color: #1a73e8;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.2em;
+        color: #e0eaff;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .staking-section {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        text-align: center;
+        margin-bottom: 40px;
+        transition: transform 0.3s;
+    }
+
+    .staking-section:hover {
+        transform: translateY(-5px);
+    }
+
+    .staking-section input[type=number] {
+        padding: 12px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        margin-right: 15px;
+    }
+
+    .staking-section button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: #1a73e8;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .staking-section button:hover {
+        background-color: #1666c1;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: #f0f4ff;
+        padding: 20px;
+        border-radius: 15px;
+        width: 45%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #1a73e8;
+    }
+
+    .card p {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+
+    .description {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        line-height: 1.8;
+    }
+
+    .description h2 {
+        color: #1a73e8;
+        margin-bottom: 15px;
+        font-size: 2em;
+    }
+
+    .description p {
+        margin-bottom: 15px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #555;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>AstraFi</h1>
+    <p>Professional Decentralized Staking & Rewards Platform (PoC)</p>
+</header>
+
+<div class="container">
+    <section class="staking-section">
+        <h2>Stake Your $SND Tokens</h2>
+        <p>Enter an amount to stake and watch your rewards grow!</p>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <button onclick="stakeTokens()">Stake</button>
+
+        <div class="stats">
+            <div class="card">
+                <h2>Staked</h2>
+                <p id="staked">0 $SND</p>
+            </div>
+            <div class="card">
+                <h2>Rewards</h2>
+                <p id="rewards">0 $SND</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="description">
+        <h2>About AstraFi</h2>
+        <p>AstraFi is a next-generation decentralized finance (DeFi) platform built on Soundness. It allows users to deposit and stake $SND tokens securely while earning rewards. The platform is designed to be simple, transparent, and accessible for both new and experienced users.</p>
+        
+        <h3>Features</h3>
+        <ul>
+            <li>Secure token staking with real-time reward calculation.</li>
+            <li>User-friendly dashboard to track deposits and rewards.</li>
+            <li>Transparent management of funds through Soundness smart contracts.</li>
+            <li>Responsive, professional UI with interactive experience.</li>
+        </ul>
+
+        <h3>Motivation</h3>
+        <p>DeFi can be complex and intimidating. AstraFi simplifies the process by offering a secure, intuitive, and accessible staking platform, leveraging Soundness to manage blockchain operations efficiently.</p>
+
+        <h3>Tech Stack</h3>
+        <ul>
+            <li>Blockchain: Soundness CLI</li>
+            <li>Smart Contracts: ERC-20 for staking and rewards</li>
+            <li>Backend: Node.js</li>
+            <li>Frontend: HTML, CSS, JavaScript</li>
+        </ul>
+
+        <h3>Roadmap</h3>
+        <ol>
+            <li>Alpha Launch: Implement basic staking and deposit functionality.</li>
+            <li>Dashboard Enhancements: Add charts, visual feedback, and analytics.</li>
+            <li>Automated Rewards: Implement reward distribution using Soundness features.</li>
+            <li>Community Feedback: Iterate and improve features based on user input.</li>
+        </ol>
+    </section>
+</div>
+
+<footer>
+    &copy; 2025 AstraFi – PoC on Soundness
+</footer>
+
+<script>
+    let stakedAmount = 0;
+    let rewards = 0;
+
+    function stakeTokens() {
+        const input = document.getElementById('amount');
+        const value = parseFloat(input.value);
+
+        if (isNaN(value) || value <= 0) {
+            alert("Please enter a valid amount.");
+            return;
+        }
+
+        stakedAmount += value;
+        rewards += value * 0.05; // simulate 5% reward
+        document.getElementById('staked').innerText = `${stakedAmount.toFixed(2)} $SND`;
+        document.getElementById('rewards').innerText = `${rewards.toFixed(2)} $SND`;
+        input.value = '';
+    }
+</script>
+
+</body>
+  </html>
+                  
