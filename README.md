@@ -1,7 +1,7 @@
 # AstraFi – Decentralized Staking & Rewards Platform
 
 ## Overview
-AstraFi is a next-generation decentralized finance (DeFi) platform built on Soundness. It allows users to deposit and stake $SND tokens securely while earning rewards. This Proof-of-Concept (PoC) demonstrates a professional, clean, and interactive staking dashboard with real-time reward simulation.
+AstraFi is a next-generation decentralized finance (DeFi) platform built on Soundness. It allows users to deposit and stake $SND tokens securely while earning rewards. demonstrates a professional, clean, and interactive staking dashboard with real-time reward simulation.
 
 ---
 
@@ -22,13 +22,13 @@ DeFi platforms can often be complex and intimidating for new users. AstraFi simp
 ## Technical Stack
 - **Blockchain:** Soundness CLI  
 - **Smart Contracts:** ERC-20 (simulated in PoC)  
-- **Backend:** Node.js (for full implementation, optional in PoC)  
+- **Backend:** Node.js (for full implementation)  
 - **Frontend:** HTML, CSS, JavaScript  
 
 ---
 
 ## Roadmap
-1. **Alpha Launch:** Basic staking and deposit functionality implemented in PoC.  
+1. **Alpha Launch:** Basic staking and deposit functionality implemented.  
 2. **Dashboard Enhancements:** Charts, visual feedback, and analytics for users.  
 3. **Automated Rewards:** Full reward distribution integration with Soundness CLI.  
 4. **Community Feedback:** Iteration and feature improvements based on user suggestions.
@@ -36,10 +36,10 @@ DeFi platforms can often be complex and intimidating for new users. AstraFi simp
 ---
 
 ## How to start
-1. **Download or clone** the repository/folder containing `astra-fi.html`.  
+1. **Download or clone** the repository/folder containing `AstraFi.html`.  
 2. **Open the file in a web browser:**  
-   - On Windows/Mac: Double-click `astra-fi.html` or right-click → Open with → Browser.  
-   - On Linux: Right-click → Open with → Browser, or run `xdg-open astra-fi.html`.  
+   - On Windows/Mac: Double-click `AstraFi.html` or right-click → Open with → Browser.  
+   - On Linux: Right-click → Open with → Browser, or run `xdg-open AstraFi.html`.  
    - On Android: Open using a browser (Chrome/Firefox recommended).  
 3. **Use the dashboard:**  
    - Enter an amount in the input field.  
