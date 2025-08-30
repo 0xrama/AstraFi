@@ -46,7 +46,3 @@ DeFi platforms can often be complex and intimidating for new users. AstraFi simp
    - Click **Stake** to simulate staking $SND tokens.  
    - Observe the **Staked** and **Rewards** cards updating in real-time.  
 4. (Optional) For development: Open browser DevTools (F12) to view console logs or modify code.
-
----
-
-*AstraFi PoC demonstrates a secure, professional, and user-friendly staking experience on Soundness, ready for further integration and development.*
